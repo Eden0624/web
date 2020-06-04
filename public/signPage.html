@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign Webpage</title>
+    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta http-equiv="refresh" content="url=signPage.html">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .topmenu2 {
+            margin: 30px;
+            float: center;
+        }
+
+        img {
+            float: left;
+            width: 40px;
+            height: 40px;
+            margin-left: 70px;
+        }
+
+        .contact {
+            width: 140px;
+            height: 45px;
+            margin-left: 507px;
+            font-size: 20px;
+        }
+
+        .signUp {
+            text-align: center;
+        }
+
+        .signIn {
+            text-align: center;
+        }
+
+        .line {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .submit {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 100px;
+            height: 50px;
+        }
+        .dark {
+            background:	#00AA55;
+            color: #eeeeee;
+        }
+        footer {
+            border-top: 1px solid #444444;
+            background-color: Darkblue;
+            color: #eeeeee;
+            text-align: center;
+            clear: both;
+            height: 56px;
+            margin-top: 10px;
+            font-family: cursive;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="vuemain" v-bind:class="{dark:nightmode}">
+        <div class="topmenu2">
+            <a href="mainPage.html" class="link"><img src="stylesheets/homePage.png" /></a>
+            <button class="contact">contact us</button>
+        </div>
+
+        <hr>
+
+        <form class="signUp">
+            <div class="line">User name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input name="name" type="text" placeholder="name" />
+            </div>
+            <div class="line">Email address:&nbsp;&nbsp;
+                <input name="Eaddr" type="email" placeholder="Your email address" />
+            </div>
+            <div class="line">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input name="pas" type="password" placeholder="Type password here" />
+            </div>
+            <input class="submit" type="submit" value="Submit">
+        </form>
+
+        <hr>
+
+        <form class="signIn">
+            <div class="line">Email address&nbsp;&nbsp;&nbsp;
+                <input name="Eaddr2" type="email" placeholder="Your email address" />
+            </div>
+            <div class="line">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input name="pas2" type="password" placeholder="Type password here" />
+            </div>
+            <input class="submit" type="submit" value="Submit">
+        </form>
+
+        <footer>
+            <p>TASK</p>
+        </footer>
+    </div>
+</body>
+
+</html>

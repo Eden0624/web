@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main Webpage</title>
+    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta http-equiv="refresh" content="url=signPage.html">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="javascripts/main.js" defer></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            color: #111111;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .search {
+            margin: 30px;
+            width: 220px;
+            height: 35px;
+            border: 1px solid #111111;
+            float: left;
+        }
+
+        .topmenu {
+            padding: 30px;
+            float: center;
+            border-bottom: 1px solid #111111;
+        }
+
+        .search_key {
+            width: 160px;
+            height: 25px;
+            border: none;
+            margin-top: 5px;
+            margin-left: 5px;
+            display: inline-block;
+        }
+
+        .submit {
+            background: #eeeeee;
+            margin-top: 5px;
+            width: 47px;
+            height: 25px;
+            display: inline-block;
+        }
+
+        .creator {
+            margin: 3px solid #111111;
+            background: url(stylesheets/plus.png) no-repeat;
+            margin-left: 400px;
+            width: 33px;
+            height: 33px;
+            float: center;
+        }
+
+        .creator2 {
+            margin-right: 60px;
+            width: 75px;
+            height: 35px;
+            float: right;
+            font-size: 15px;
+        }
+
+        .creator3 {
+            width: 75px;
+            height: 35px;
+            float: right;
+            font-size: 15px;
+        }
+
+        .link {
+            text-decoration: none;
+            color: #111111;
+        }
+
+        .dark {
+            background:	#00AA55;
+            color: #eeeeee;
+        }
+
+        .nightButton {
+            text-align: center;
+            width: 300px;
+            float: left;
+            margin-top: 25px;
+            margin-left: 3em;
+            margin-bottom:22px;
+            border-right: 1px solid #111111;
+
+        }
+
+        .pure-button {
+            width: 80px;
+            height: 35px;
+            font-size: 15px;
+        }
+
+        .contact {
+            margin: 23px;
+        }
+
+        .pure-button-group {
+            margin: 23px;
+        }
+
+        span {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 25px;
+        }
+
+        img {
+            width: 220px;
+            height: 220px;
+        }
+
+        footer {
+            border-top: 1px solid #444444;
+            background-color: Darkblue;
+            color: #eeeeee;
+            text-align: center;
+            clear: both;
+            height: 68px;
+            margin-top: 17px;
+            font-family: cursive;
+            font-size: 47px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="vuemain" v-bind:class="{dark:nightmode}">
+        <form action="" method="post">
+            <div class="search">
+                <input type="text" class="search_key" value="Type">
+                <input type="submit" class="submit" value="search">
+            </div>
+            <div class="topmenu">
+                <button class="creator"></button>
+                <button class="creator2"><a href="signPage.html" class="link">log in</a></button>
+                <button class="creator3"><a href="signPage.html" class="link">sign up</a></button>
+            </div>
+        </form>
+
+        <div class="nightButton" v-bind:class="{dark:nightmode}">
+
+            <img src="stylesheets/calendar.png" />
+
+            <hr>
+            <div class="contact">
+                <button class="pure-button" method="post">contact us</button>
+            </div>
+            <hr>
+
+            <div class="nightButton2">
+                <span>Nightmode:</span>
+                <div class="pure-button-group" v-bind:class="{dark:nightmode}" role="group" aria-label="Nightmode">
+                    <button class="pure-button" v-bind:class="{'pure-button-active': !nightmode}"
+                        onclick="vueinst.nightmode = false;">OFF</button>
+                    <button class="pure-button"
+                        v-bind:class="[nightmode ? 'pure-button-primary' : '',nightmode ? 'pure-button-active' : '']"
+                        onclick="vueinst.nightmode = true;">ON</button>
+                </div>
+            </div>
+        </div>
+    <footer>
+        <p>TASK</p>
+    </footer>
+</div>
+</body>
+
+</html>
